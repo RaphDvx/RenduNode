@@ -1,0 +1,20 @@
+<div *ngIf="movie">
+  <h2>{{ movie.title }}</h2>
+  <div>
+    <label>Titre :</label>
+    <input [(ngModel)]="movie.title" />
+  </div>
+  <div>
+    <label>Réalisateur :</label>
+    <input [(ngModel)]="movie.director" />
+  </div>
+  <div>
+    <label>Notes :</label>
+    <textarea [(ngModel)]="movie.notes"></textarea>
+  </div>
+  <div>
+    <label>Indice de recommandation :</label>
+    <input type="number" [(ngModel)]="movie.recommendationIndex" />
+  </div>
+  <button (click)="saveChanges()">Enregistrer</button>
+</div>

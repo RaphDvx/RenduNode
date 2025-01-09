@@ -1,0 +1,21 @@
+<div class="container mt-4">
+  <h2>Liste des films vus</h2>
+  <div class="row row-cols-1 row-cols-md-2 g-3">
+    <div class="col" *ngFor="let movie of movies">
+      <div class="card h-100">
+        <div class="card-body">
+          <h5 class="card-title">{{ movie.title }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ movie.director }}</h6>
+          <p class="card-text">
+            <strong>Notes :</strong> {{ movie.notes }}<br />
+            <strong>Indice de recommandation :</strong> {{ movie.recommendationIndex }}
+          </p>
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+          <button class="btn btn-danger btn-sm" (click)="deleteMovie(movie.id)">Supprimer</button>
+          <a [routerLink]="['/detail', movie.id]" class="btn btn-primary btn-sm">Détails</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

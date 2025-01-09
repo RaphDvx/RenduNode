@@ -1,0 +1,21 @@
+<!-- watchlist.component.html -->
+<div class="mt-4">
+  <h2>Ma Watchlist</h2>
+  <div class="movie-grid">
+    <mat-card
+      *ngFor="let movie of watchlist"
+      class="movie-card"
+    >
+      <mat-card-title>{{ movie.title }}</mat-card-title>
+      <mat-card-subtitle>{{ movie.director }}</mat-card-subtitle>
+      <mat-card-content>
+        <p><strong>Notes :</strong> {{ movie.notes }}</p>
+        <p><strong>Indice de recommandation :</strong> {{ movie.recommendationIndex }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="markAsWatched(movie)">Marquer comme vu</button>
+        <button mat-raised-button color="warn" (click)="deleteMovie(movie.id)">Supprimer</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

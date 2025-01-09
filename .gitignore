@@ -1,0 +1,7 @@
+client/.angular/cache
+client/node_modules/
+client/dist/
+client/.env
+server/node_modules/
+.idea/
+.vscode/

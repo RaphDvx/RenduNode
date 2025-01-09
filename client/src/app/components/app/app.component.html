@@ -1,0 +1,17 @@
+<nav class="navbar navbar-expand navbar-dark bg-dark px-3">
+  <a class="navbar-brand" routerLink="/">MovieApp</a>
+  <ul class="navbar-nav ms-auto">
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/movies" routerLinkActive="active">Films vus</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/watchlist" routerLinkActive="active">Watchlist</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" routerLink="/add" routerLinkActive="active">Ajouter un film</a>
+    </li>
+  </ul>
+</nav>
+<div class="container mt-4">
+  <router-outlet></router-outlet>
+</div>
